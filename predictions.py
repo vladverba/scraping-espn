@@ -13,8 +13,8 @@ def get_stats_weighted_average(
     # --- get Home or Away stats (based on input) ---
 
     # make sure home_or_away is either "Home" or "Away"
-    if home_or_away not in ["Home", "Away"]:
-        raise ValueError("Input must be either 'Home' or 'Away'")
+    if home_or_away not in ["Home", "Road"]:
+        raise ValueError("Input must be either 'Home' or 'Road'")
     home_or_away_stats = stats_data["RoadVsHome"][home_or_away]
 
     # --- get the month stats from input ---
@@ -81,7 +81,7 @@ if __name__ == "__main__":
 
     stats_data = get_transformed_splits(player_id=player_id)
 
-    input_home_or_away = input("Enter Home or Away: ")
+    input_home_or_away = input("Enter Home or Road: ")
 
     input_opponent = input("Enter Opponent: ")
 
